@@ -149,7 +149,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e60879fa1ae764c91947c243f9a701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectorHoyo
-  pantallaGanaste: {fileID: 0}
+  pantallaGanaste: {fileID: 455353667}
+  golpesFinalText: {fileID: 1194455994}
+  tiempoFinalText: {fileID: 1106385048}
+  contadorGolpesArriba: {fileID: 693282941}
+  contadorTiempoArriba: {fileID: 1851041955}
+  golpesDeArribaText: {fileID: 1194455994}
+  tiempoDeArribaText: {fileID: 1106385048}
 --- !u!65 &101995903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -463,8 +469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 3.15}
+  m_SizeDelta: {x: 482.8, y: 368.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455353669
 MonoBehaviour:
