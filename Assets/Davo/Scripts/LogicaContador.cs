@@ -1,28 +1,30 @@
 using UnityEngine;
-using TMPro; // Esto le permite al código controlar tus números neón
+using TMPro; // Obligatorio para cambiar tus números neón
 
 public class LogicaContador : MonoBehaviour
 {
-    // Acá vamos a conectar tus números de la pantalla
-    public TextMeshProUGUI textoDeLosGolpes; 
+    public TextMeshProUGUI textoGolpes; // Casilla para tu GolpesText
     private int cantidadGolpes = 0;
 
     void Start()
     {
-        // Al darle Play, se asegura de que tu cartel arranque en 00
-        ActualizarElTexto();
+        cantidadGolpes = 0;
+        ActualizarTexto();
     }
 
-    // Esta es la función mágica que usará tu compañero al golpear la pelota
-    public void RegistrarGolpe()
+    // Esta función la va a llamar el palo cada vez que choque la pelota
+    public void SumarGolpe()
     {
         cantidadGolpes++;
-        ActualizarElTexto();
+        ActualizarTexto();
+        Debug.Log("¡Golpe registrado! Total: " + cantidadGolpes);
     }
 
-    // Esto hace que el número siempre tenga dos dígitos (00, 01, 02...)
-    private void ActualizarElTexto()
+    void ActualizarTexto()
     {
-        textoDeLosGolpes.text = cantidadGolpes.ToString("D2");
+        if (textoGolpes != null)
+        {
+            textoGolpes.text = cantidadGolpes.ToString("00"); // Mantiene el formato neón de dos dígitos
+        }
     }
 }
